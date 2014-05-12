@@ -2,7 +2,8 @@
 <html>
 <head>
 <meta charset="utf-8" />
-<title>Virtual Rubik's Cube with WebGL</title>
+<title>Rubic</title>
+<link rel="stylesheet" type="text/css" href="style.css">
 <script type="text/javascript" src="lib/virtualrubik.js"></script>
 <script type="text/javascript">includeVirtualRubik("lib");</script>
 <script type="text/javascript">
@@ -55,7 +56,7 @@ function configDay(virtualrubik) {
 // ----------------------------------------------------
 function configNight(virtualrubik) {
   var attr=virtualrubik.getCubeAttributes();
-  attr.backgroundColor=[10,17,38,255]; // dark blue background [r,g,b,a]
+  attr.backgroundColor=[0,0,0,255]; // dark blue background [r,g,b,a]
 
   // cube parts  
   var partsPhong=[0.2,0.1,0.0,16.0];//unlit [ambient, diffuse, specular, shininess]
@@ -91,9 +92,13 @@ function configNight(virtualrubik) {
 }
 </script>
 </head>
-<body onLoad="attachVirtualRubik(document.getElementById('canvas1'),configCubes)">
-<p>Virtual Rubik's Cube with WebGL</p>
-<canvas id="canvas1" class="virtualrubik" width="600" height="600"></canvas>
+<body onLoad="attachVirtualRubik(document.getElementById('canvas1'),configCubes)" bgcolor="#000000">
+  <div id="title"><h1>Rubic<sup> 3</sup></h1></div>
+<div id="center">
+  <canvas id="canvas1" class="virtualrubik" width="600" height="600"></canvas>
+</div>
+
+<!--
 <p><input type="checkbox" 
     onchange="document.getElementById('canvas1').virtualrubik.setAutorotate(this.checked);">Autorotate</input></p>
 <p><button type="button"
@@ -104,6 +109,6 @@ function configNight(virtualrubik) {
     onclick="document.getElementById('canvas1').virtualrubik.wobble();">Wobble</button>
    <button type="button"
     onclick="document.getElementById('canvas1').virtualrubik.explode();">Explode</button></p>
-<p>© 2011 Werner Randelshofer. All Rights Reserved.</p>
+<p>© 2011 Werner Randelshofer. All Rights Reserved.</p> -->
 </body>
 </html> 
