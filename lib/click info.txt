@@ -1,0 +1,5 @@
+Face: 3U: 1V: 2 -> Face: 3U: 1V: 0
+
+Face: 2U: 1V: 0 -> Face: 2U: 1V: 2
+
+Face: 2U: 2V: 1 -> Face: 2U: 0V: 1
