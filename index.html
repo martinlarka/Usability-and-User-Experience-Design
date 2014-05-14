@@ -101,8 +101,12 @@ function configNight(virtualrubik) {
 <!--
 <p><input type="checkbox" 
     onchange="document.getElementById('canvas1').virtualrubik.setAutorotate(this.checked);">Autorotate</input></p>
+  -->
 <p><button type="button"
-    onclick="document.getElementById('canvas1').virtualrubik.reset();">Reset</button>
+    onclick="document.getElementById('canvas1').virtualrubik.solve();">Solve</button>
+<p><button type="button"
+    onclick="document.getElementById('canvas1').virtualrubik.unsolve();">Unsolve</button>
+    <!--
    <button type="button"
     onclick="document.getElementById('canvas1').virtualrubik.scramble();">Scramble</button>
    <button type="button"
