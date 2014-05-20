@@ -4,8 +4,11 @@
 <meta charset="utf-8" />
 <title>Rubic</title>
 <link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" type="text/css" href="font-awesome.css">
+<link href='http://fonts.googleapis.com/css?family=Raleway:400,500' rel='stylesheet' type='text/css'>
 <script type="text/javascript" src="lib/virtualrubik.js"></script>
 <script type="text/javascript">includeVirtualRubik("lib");</script>
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript">
 // This function is called on successfull initialization of the cube.
 // ----------------------------------------------------
@@ -89,14 +92,55 @@ function configNight(virtualrubik) {
   }
   
   virtualrubik.setCubeAttributes(attr);
+  
 }
+
+$(document).ready(function(){
+	$(".linkList a").click(function(event){
+		console.log("event", event);
+		event.preventDefault();
+		document.getElementById('canvas1').virtualrubik.solve();
+		var $el = $(event.target);
+		var url = $el.attr('href');
+		console.log(url);
+		$(this).prev($el).remove()
+		$el.remove();
+
+		setTimeout(function(){
+			OpenInNewTab(url);
+		}, 500);
+		
+		
+	});
+	
+	$( ".fa" ).click(function() {
+		$( ".linkList" ).toggle("slow");
+  	});
+	
+});
+
 </script>
 </head>
-<body onLoad="attachVirtualRubik(document.getElementById('canvas1'),configCubes)" bgcolor="#000000">
+<body onLoad="attachVirtualRubik(document.getElementById('canvas1'),configCubes)" bgcolor="#000">
   <div id="title"><h1>Rubic<sup> 3</sup></h1></div>
+
+
+<div id="listContainer" class="right">
+<i class="fa fa-align-justify fa-2x"></i> 
+	 <ul class="linkList">
+	 	<li><img src="images/lillagumman.png"/><a href="http://www.lillagumman.se/"> Lilla gumman</a></li>
+	 	<li><img src="images/feber.jpg"/><a href="http://www.feber.se/"> Feber</a></li>
+	 	<li><img src="images/swedroid.png"/><a href="http://www.swedroid.se/">Swedroid</a></li>
+	 	<li><img src="images/sm-logo.png"/><a href="http://www.smashingmagazine.com/">Smashing Magazine</a></li>
+	 	<li><img src="images/google.jpg"/><a href="http://googledevelopers.blogspot.se/">Google Developers</a></li>
+	 </ul>
+</div>
 <div id="center">
   <canvas id="canvas1" class="virtualrubik" width="600" height="600"></canvas>
 </div>
+
+
+
 
 <!--
 <p><input type="checkbox" 

@@ -1,3 +1,8 @@
+html, body {
+	height: 100%;
+	width: 100%;
+}
+
 div#title
 {
 	text-align: center;
@@ -7,4 +12,85 @@ div#title
 div#center 
 {	
 	text-align: center;
+}
+
+#title{
+	font-family: 'Raleway', sans-serif;
+}
+
+
+
+.linkList{
+	list-style: none;
+	width: 400px;
+	
+}
+
+ul img
+{
+
+width: 50px;
+height:50px;
+overflow: hidden;
+}
+
+li{
+	color: white;
+	text-decoration: none;
+	border-bottom:1px solid rgba(255,255,255,0.3);
+	padding-top: 5px;
+	padding-bottom: 5px;
+	vertical-align: middle;
+	
+	
+}
+
+
+li a{
+	
+	color: white;
+	padding-left: 80px;
+	font-family: 'Raleway';
+}
+
+li a:hover{
+	color:rgba(255,255,255,0.5);
+}
+
+
+.fa fa-align-justify{
+	font-size: larger;
+}
+
+.i{
+	color: white;
+}
+
+.left{
+	float: left;
+}
+
+.right 
+{
+	float: right;
+}
+
+#listContainer{
+	padding-top: 10px;
+	padding-right: 12px;
+	min-height: 100%;
+	border: white;
+	background-color: rgba(255,255,255,0.2);
+	
+	border-left-style:solid;
+	border-width: thin;
+	border-color:rgba(255,255,255,0.3);
+	color: white;
+	padding-left: 5px;
+	
+}
+
+a
+{
+text-decoration: none;
 }
