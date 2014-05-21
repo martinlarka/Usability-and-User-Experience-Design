@@ -22,7 +22,7 @@ div#center
 
 .linkList{
 	list-style: none;
-	width: 400px;
+	width: 350px;
 	
 }
 
@@ -49,8 +49,9 @@ li{
 li a{
 	
 	color: white;
-	padding-left: 80px;
+	padding-left: 50px;
 	font-family: 'Raleway';
+	font-size: smaller;
 }
 
 li a:hover{
