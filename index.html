@@ -103,7 +103,10 @@ $(document).ready(function(){
 		var $el = $(event.target);
 		var url = $el.attr('href');
 		console.log(url);
-		$(this).prev($el).remove()
+		
+		$(this).parent().prev($el).andSelf().remove();
+		
+		//$(this).prev($el).remove()
 		$el.remove();
 
 		setTimeout(function(){
