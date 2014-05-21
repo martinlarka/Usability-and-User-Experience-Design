@@ -107,11 +107,13 @@ $(document).ready(function(){
 		$(this).parent().prev($el).andSelf().remove();
 		
 		//$(this).prev($el).remove()
+
+
 		$el.remove();
 
 		setTimeout(function(){
 			OpenInNewTab(url);
-		}, 500);
+		}, 800);
 		
 		
 	});
@@ -139,7 +141,7 @@ $(document).ready(function(){
 	 </ul>
 </div>
 <div id="center">
-  <canvas id="canvas1" class="virtualrubik" width="300" height="300"></canvas>
+  <canvas id="canvas1" class="virtualrubik" width="400" height="400"></canvas>
 </div>
 
 
